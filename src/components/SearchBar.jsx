@@ -9,8 +9,14 @@ function SearchBar(){
     const [value, setValue] = useState('')
     const [result, setResult] = useState(foodItems)
     function Compare(){
-        const output = result.filter((foods) => foods.name.toUpperCase().includes(value.toUpperCase()))
-        setResult(output)
+        const output = foodItems.filter((foods) => foods.name.toUpperCase().includes(value.toUpperCase()))
+        if (value === ''){
+            setResult(foodItems)
+        }
+        else {
+            setResult(output)
+        }
+        console.log('Bueno', output)
     }
     useEffect(() => {
         Compare()
