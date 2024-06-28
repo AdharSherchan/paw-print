@@ -28,7 +28,7 @@ function SearchBar(){
             <div className="flex flex-row justify-between items-center w-full">
                 <h1 className="font-bold text-4xl w-1/2 font-serif" >AD's Shopping List for Momo party</h1>
                 <form className="flex border border-black bg-clip-padding p-2 bg-gray-600 items-center">
-                    <input type="text" placeholder=" Search..." name="search" onChange={(e) => setValue(e.target.value)} className="border border-grey text-indigo-900"/>
+                    <input type="text" placeholder=" Search..." name="search" onChange={(e)=> setValue(e.target.value)} className="border border-grey text-indigo-900"/>
                     <button type="submit"><CiSearch className="text-white size-5 m-1" /></button>
                 </form>
             </div>
@@ -38,7 +38,7 @@ function SearchBar(){
                         <li key={foods.name} className=" hover:text-blue-400 transition duration-300"> {foods.name} </li>
                     ))}
                 </ol>
-            </div>
+            </div> 
         </div>
     </div>
     )
