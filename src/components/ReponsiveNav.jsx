@@ -1,4 +1,4 @@
-const ResponsiveNav = ({hamClick}) => {
+const ResponsiveNav = ({setHamClick}) => {
   return (
     <div className="flex justify-end lg:hidden ">
       <div className="flex flex-col right-0 h-screen w-[70%] bg-slate-600 border border-red-800">

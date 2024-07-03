@@ -52,7 +52,7 @@ const Meme = () => {
           </button>
         </div>
         {hamClick && (
-            <ResponsiveNav key={index} hamClick={hamClick} />
+            <ResponsiveNav setHamClick={setHamClick} />
         )}
         {/* <h1 className="xl:text-6xl text-xl xl:mt-3 h-fit w-fit text-black font-bold font-serif "> HOUSE OF MEMES </h1> */}
         <Navbar />
