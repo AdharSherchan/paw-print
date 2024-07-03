@@ -8,13 +8,18 @@ import './App.css'
 import BagaanThakali from './components/BagaanThakali.jsx'
 import Shimmer from './components/Shimmer.jsx'
 import Card from './components/Card.jsx'
+import Meme from './components/Meme.jsx'
+import MemeCard from './components/MemeCard.jsx'
+import MemeShimmer from './components/MemeShimmer.jsx'
+import Navbar from './components/Navbar.jsx'
+import ResponsiveNav from './components/ReponsiveNav.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     
-    <Test />
+    <Meme />
 
   )
 }

@@ -9,6 +9,7 @@ function BagaanThakali() {
   const [foodDisplay, setFoodDisplay] = useState([]);
   const [display, setDisplay] = useState(foodDisplay);
   const [loading, setLoading] = useState(true);
+  const [itemnumber, setItemNumber] = useState(4)
   const shimmerArray = [1, 2, 3, 4, 5, 6, 7, 8];
   function Compare() {
     const output = foodDisplay.filter(
@@ -26,7 +27,7 @@ function BagaanThakali() {
   console.log(loading);
   const fetchFoodItems = async () => {
     const response = await fetch(
-      "https://www.themealdb.com/api/json/v1/1/categories.php"
+      "https://www.themealdb.com/api/json/v1/1/categories.php/"
     );
     const items = await response.json();
     setFoodDisplay(items.categories);
@@ -76,12 +77,12 @@ function BagaanThakali() {
         <div className="flex flex-row flex-wrap gap-4 w-full xl:px-5 xl:pb-10 p-5 xl:justify-start justify-center items-center">
           {loading === true ? (
             <div className="flex flex-row flex-wrap gap-4 w-full xl:px-5 xl:pb-10 p-5 xl:justify-start justify-center items-center">
-              {shimmerArray.map((blocks) => (
-                <Shimmer />
+              {shimmerArray.map((blocks, index) => (
+                <Shimmer key={index} />
               ))}
             </div>
           ) : (
-            display.map((items, index) => <Card items={items} index={index} />)
+              display.map((items, index) => <Card key={index} items={items} index={index} />)
           )}
         </div>
       </div>
@@ -90,3 +91,6 @@ function BagaanThakali() {
 }
 
 export default BagaanThakali;
+
+
+
