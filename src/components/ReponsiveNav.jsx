@@ -1,43 +1,53 @@
-const ResponsiveNav = ({setHamClick}) => {
+import { NavLink } from "react-router-dom";
+
+const ResponsiveNav = ({ setHamClick }) => {
   return (
-    <div className="flex justify-end lg:hidden ">
-      <div className="flex flex-col right-0 h-screen w-[70%] bg-slate-600 border border-red-800">
-        <div className="size-16 border border-red-500">
-          <button className="text-5xl" onClick={() => setHamClick(false)}> X </button>
+    <div className="flex  lg:hidden h-0 ">
+      <div className="flex flex-col right-0 min-h-screen w-[70%] bg-slate-800 top-0 fixed transition  duration-300">
+        <div className="size-16 ml-5 mt-3">
+          <button
+            className="text-5xl text-white"
+            onClick={() => setHamClick(false)}
+          >
+            {" "}
+            X{" "}
+          </button>
         </div>
-        <div className="flex flex-col h-full justify-center items-start text-purple-200 font-sans font-bold text-2xl m-3 p-2 gap-y-5 ">
-          <a
-            rel="stylesheet"
-            href=""
-            className=" py-1 px-5 rounded-full w-full "
+        <div className="flex flex-col  h-[80%] justify-center items-start text-white font-sans font-bold text-2xl mt-10 p-2 gap-y-5 ">
+          <NavLink to={`/`} 
+          className=" p-1 px-5 m-1 rounded-full w-full "
+          style={({isActive}) => {
+            return{ backgroundColor: isActive? "purple": "none"}
+          }}
           >
-            {" "}
-            Home
-          </a>
-          <a
-            rel="stylesheet"
-            href=""
+            HOME
+          </NavLink>
+          <NavLink
+            to={`/MemeProducts`}
             className=" p-1 px-5 m-1 rounded-full w-full "
+            style={({isActive}) => {
+              return{ backgroundColor: isActive? "purple": "none"}
+            }}
+          >
+            PRODUCTS
+          </NavLink>
+          <NavLink to={`/MemeBlog`} 
+          className=" p-1 px-5 m-1 rounded-full w-full  active:bg-blue-300"
+          style={({isActive}) => {
+            return{ backgroundColor: isActive? "purple": "none"}
+          }}
+          >
+            BLOG
+          </NavLink>
+          <NavLink to={`/MemeAbout`} 
+          className=" p-1 px-5 m-1 rounded-full w-full  active:bg-blue-300"
+          style={({isActive}) => {
+            return{ backgroundColor: isActive? "purple": "none"}
+          }}
           >
             {" "}
-            Products{" "}
-          </a>
-          <a
-            rel="stylesheet"
-            href=""
-            className=" p-1 px-5 m-1 rounded-full w-full "
-          >
-            {" "}
-            Blog{" "}
-          </a>
-          <a
-            rel="stylesheet"
-            href=""
-            className=" p-1 px-5 m-1 rounded-full w-full "
-          >
-            {" "}
-            About{" "}
-          </a>
+            ABOUT
+          </NavLink>
         </div>
       </div>
     </div>

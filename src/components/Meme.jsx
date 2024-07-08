@@ -42,10 +42,10 @@ const Meme = () => {
   return (
     <div className="flex flex-col min-h-screen w-full items-center justify-center gap-y-5 p-10 bg-slate-800">
       <div className="flex items-center justify-center w-[80%] ">
-        <div className="flex justify-end w-full border border-red-600">
+        <div className="flex justify-end w-full ">
           <button
             type="submit"
-            className="text-white size-10 m-1 object-contain border lg:hidden border-green-700"
+            className="text-white size-10 m-1 object-contain  lg:hidden"
             onClick={() => setHamClick(true)}
           >
             <GiHamburgerMenu className="text-white size-5 m-1" />
@@ -57,7 +57,7 @@ const Meme = () => {
         {/* <h1 className="xl:text-6xl text-xl xl:mt-3 h-fit w-fit text-black font-bold font-serif "> HOUSE OF MEMES </h1> */}
         <Navbar />
       </div>
-      <div className="flex flex-row flex-wrap col-span-5 mt-16 gap-3 h-fit  w-[80%] border border-yellow-500">
+      <div className="flex flex-row flex-wrap col-span-5 mt-16 gap-3 h-fit  w-[80%] ">
         {loading === true ? (
           <MemeShimmer />
         ) : (

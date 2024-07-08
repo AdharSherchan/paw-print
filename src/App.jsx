@@ -13,13 +13,19 @@ import MemeCard from './components/MemeCard.jsx'
 import MemeShimmer from './components/MemeShimmer.jsx'
 import Navbar from './components/Navbar.jsx'
 import ResponsiveNav from './components/ReponsiveNav.jsx'
+import MemeAbout from './components/MemeAbout.jsx'
+import MemeBlog from './components/MemeBlog.jsx'
+import MemeProducts from './components/MemeProducts.jsx'
+import CoffeeCards from './components/CoffeeCards.jsx'
+import CoffeeCarousel from './components/CoffeeCarousel.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     
-    <Meme />
+    <CoffeeCards />
+    
 
   )
 }
