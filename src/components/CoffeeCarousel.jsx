@@ -1,39 +1,62 @@
-import { useEffect } from "react"
-import { useState } from "react"
-import CoffeeCards from "./CoffeeCards"
+import { useEffect } from "react";
+import { useState } from "react";
+import CoffeeCards from "./CoffeeCards";
 
 const CoffeeCarousel = () => {
-    const [display, setDisplay] = useState([])
-    const fetchCoffee = async() => {
-        const response = await fetch (`https://api.sampleapis.com/coffee/hot`)
-        const items = await response.json()
-        setDisplay(items)
-    }
-    useEffect(() => {
-        fetchCoffee()
-    }, [])
-    console.log('Display Araay', display)
+  const [display, setDisplay] = useState([]);
+  const [show, setShow] = useState(0);
+  const fetchCoffee = async () => {
+    const response = await fetch(`https://api.sampleapis.com/coffee/hot`);
+    const items = await response.json();
+    setDisplay(items);
+    console.log("Items", items);
+  };
+  const next = () => {
+    setShow((prev) => (prev === display.length - 1 ? 0 : prev + 1));
+  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+        next();
+    }, 3000);
+    return () => clearInterval(interval)
+  }, []);
+  useEffect(() => {
+    fetchCoffee();
+  }, []);
 
-    return(
-        <div className="flex items-center justify-center h-screen bg-[url('/public/coffee.jpg')] lg:bg-contain bg-cover ">
-            <div className="flex justify-center items-center h-[100%] w-[100%] backdrop-blur-sm">
-                <div className="flex flex-col items-center justify-center h-[90%] w-[90%] gap-10 bg-stone-200">
-                    <div className="flex justify-center items-center h-[10%] w-[90%] bg-pink-200">
-                        <h1 className="font-bold font-serif md:text-3xl text-xl">
-                            COFFEE AND CONVERSATION by AD
-                        </h1>
+  console.log("Display Araay", display);
 
-                    </div>
-                    <div className=" h-[70%] w-[90%] bg-yellow-200">
-                        {display.map((items, index) => (
-                            <CoffeeCards key={index} items={items} index={index} />
-                        ))}
-                    </div>
+  useEffect(() => {
+    console.log("Show Value", show);
+  }, [show]);
 
-                </div>
-            </div>
-            
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-[url('/public/coffee.jpg')] lg:bg-contain bg-cover ">
+      <div className="flex justify-center items-center h-[100%] w-[100%] backdrop-blur-sm m-5">
+        <div className="flex flex-col items-center justify-center h-[90%] w-[90%] bg-stone-200/40 rounded-xl m-5">
+          <div className="flex justify-center items-center h-[10%] w-[90%] m-5 ">
+            <h1 className="font-bold font-serif text-amber-950 md:text-4xl text-xl">
+              COFFEE AND CONVERSATION by AD
+            </h1>
+          </div>
+
+          <div className="flex justify-center items-center h-[70%] w-[90%] gap-2 m-5">
+            <button
+              onClick={() =>
+                setShow((prev) => (prev <= 0 ? display.length - 1 : prev - 1))
+              }
+            >
+              {" "}
+              Click Here
+            </button>
+
+            {display.length && <CoffeeCards items={display[show]} />}
+
+            <button onClick={() => next}> Click Here</button>
+          </div>
         </div>
-    )
-}
-export default CoffeeCarousel
+      </div>
+    </div>
+  );
+};
+export default CoffeeCarousel;
