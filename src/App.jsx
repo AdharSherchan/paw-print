@@ -18,13 +18,15 @@ import MemeBlog from './components/MemeBlog.jsx'
 import MemeProducts from './components/MemeProducts.jsx'
 import CoffeeCards from './components/CoffeeCards.jsx'
 import CoffeeCarousel from './components/CoffeeCarousel.jsx'
+import DropDown from './components/DropDown.jsx'
+import DropDownContent from './components/DropDownContent.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     
-    <CoffeeCarousel />
+    <BagaanThakali />
     
 
   )

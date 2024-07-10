@@ -19,7 +19,7 @@ const CoffeeCarousel = () => {
         next();
     }, 3000);
     return () => clearInterval(interval)
-  }, []);
+  }, [next]);
   useEffect(() => {
     fetchCoffee();
   }, []);
@@ -52,7 +52,9 @@ const CoffeeCarousel = () => {
 
             {display.length && <CoffeeCards items={display[show]} />}
 
-            <button onClick={() => next}> Click Here</button>
+            <button onClick={() => 
+            next()
+            }> Click Here</button>
           </div>
         </div>
       </div>

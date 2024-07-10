@@ -10,6 +10,10 @@ import{
   RouterProvider,
 } from "react-router-dom"
 import './index.css'
+import DropDown from './components/DropDown.jsx'
+import DropDownContent from './components/DropDownContent.jsx'
+import CoffeeCards from './components/CoffeeCards.jsx'
+import CoffeeCarousel from './components/CoffeeCarousel.jsx'
 
 const router = createBrowserRouter([
   {
@@ -17,16 +21,16 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "MemeAbout/",
-    element: <MemeAbout />
+    path: "DropDown/",
+    element: <DropDown />
   },
   {
-    path: "MemeBlog/",
-    element: <MemeBlog />
+    path: "Meme/",
+    element: <Meme />
   },
   {
-    path: "MemeProducts/",
-    element: <MemeProducts />
+    path: "CoffeeCarousel/",
+    element: <CoffeeCarousel />
   }
 ])
 

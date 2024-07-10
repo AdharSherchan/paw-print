@@ -14,7 +14,7 @@ const ResponsiveNav = ({ setHamClick }) => {
           </button>
         </div>
         <div className="flex flex-col  h-[80%] justify-center items-start text-white font-sans font-bold text-2xl mt-10 p-2 gap-y-5 ">
-          <NavLink to={`/`} 
+          <NavLink to={`/Meme`} 
           className=" p-1 px-5 m-1 rounded-full w-full "
           style={({isActive}) => {
             return{ backgroundColor: isActive? "purple": "none"}
