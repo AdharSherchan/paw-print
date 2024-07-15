@@ -20,13 +20,18 @@ import CoffeeCards from './components/CoffeeCards.jsx'
 import CoffeeCarousel from './components/CoffeeCarousel.jsx'
 import DropDown from './components/DropDown.jsx'
 import DropDownContent from './components/DropDownContent.jsx'
+import PawPrints from './components/PawPrints.jsx'
+import PawNavbar from './components/PawNavbar.jsx'
+import FirstContent from './components/FirstContent.jsx'
+import PawResponsiveNav from './components/PawResponsiveNav.jsx'
+import SecondContent from './components/SecondContent.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     
-    <BagaanThakali />
+    <PawResponsiveNav />
     
 
   )

@@ -14,18 +14,18 @@ const DropDown = () => {
     );
     const items = await response.json();
     setDisplay(items);
-    console.log("IN Items", items);
   }
   const Compare = () => {
     const output = display.filter(
       (items) => items.name.toUpperCase().includes(value.toUpperCase())
     )
-    if (value === '') {
+    if (value === "") {
       setSearchDisplay(display)
     } else {
       setSearchDisplay(output)
     }
     console.log("Output of Search bar", output)
+    console.log("Search Display inside Compare", searchDisplay)
   }
   
   useEffect(() => {
@@ -34,25 +34,26 @@ const DropDown = () => {
   useEffect(() => {
     Compare()
   }, [value, display])
-  console.log("IN Display", display);
-  console.log("drop", drop)
+  
   console.log("value of SB", value)
+
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className=" h-[500px] w-[70%] border border-black">
-        <div className="h-10 w-full border border-black">
+    <div className="flex items-center justify-center lg:h-screen min-h-screen w-screen bg-[url('/public/globe.jpg')] bg-fill relative">
+      <div className=" flex items-center justify-center h-full w-full bg-black/40 absolute">
+      <div className=" h-[500px] xl:w-[45%] w-[70%]">
+        <div className="h-10 border border-black  bg-black/40 rounded-2xl">
           <form className=" flex justify-between h-full w-full">
             <input
               type="text"
               placeholder=" Search Country Name..."
               name="search"
-              className="h-full w-[95%]"
+              className="h-full xl:w-[95%] w-[90%] rounded-2xl  text-slate-300 bg-black/40"
               onChange={(e) => setValue(e.target.value)}
             />
             <button
             type="button"
               onClick={() => setDrop((prev) => !prev)}
-              className="h-full w-[5%] border border-black"
+              className="h-full xl:w-[5%] w-[10%] rounded-full  "
             >
               <CiSearch className="size-8" />
             </button>
@@ -62,11 +63,12 @@ const DropDown = () => {
         <div className=" h-[460px] w-full overflow-auto">
             
           {drop && display.length && (
-            display?.map((items, index) => (
+            searchDisplay?.map((items, index) => (
               <DropDownContent key={index} items={items} index={index} />
             ))
           )}
         </div>
+      </div>
       </div>
     </div>
   );
