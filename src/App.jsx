@@ -25,13 +25,22 @@ import PawNavbar from './components/PawNavbar.jsx'
 import FirstContent from './components/FirstContent.jsx'
 import PawResponsiveNav from './components/PawResponsiveNav.jsx'
 import SecondContent from './components/SecondContent.jsx'
+import ThirdContent from './components/ThirdContent.jsx'
+import PawCards from './components/PawCards.jsx'
+import FourthContent from './components/FourthContent.jsx'
+import PawRaised from './components/PawRaised.jsx'
+import PawPrice from './components/PawPrice.jsx'
+import FifthContent from './components/FifthContent.jsx'
+import PawCalender from './components/PawCalender.jsx'
+import SixthContent from './components/SixthContent.jsx'
+import SeventhContent from './components/SeventhContent.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     
-    <PawResponsiveNav />
+    <PawCards />
     
 
   )
