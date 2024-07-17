@@ -1,11 +1,7 @@
 const FirstContent = () => {
   return (
-      <div className="flex xl:flex-row flex-col items-center justify-between xl:mb-[109px] mb-[50px]  ">
-        <div className="flex flex-col items-center ml-[85px] gap-[16px] ">
-          <img src="/public/Frame 7.png" className="xl:block hidden" />
-          <img src="/public/Frame 8.png" className="xl:block hidden" />
-        </div>
-        <div className=" flex flex-col lg:ml-[10px] lg:mr-[50px] lg:w-[650px] gap-[10px] p-[18px]">
+      <div className="flex xl:flex-row flex-col items-center justify-between ml-[113px] mr-[250px] mb-[112px] gap-[183px] pt-[225px] ">
+        <div className=" flex flex-col xl:ml-0 lg:ml-[10px] lg:mr-[50px] lg:w-[650px] gap-[10px] ">
           <p className="font-[Work Sans] font-bold xl:text-[14px] md:text-[16px]">
             SAVING LIVES EVERY DAY
           </p>
@@ -22,10 +18,11 @@ const FirstContent = () => {
             </p>
           </div>
         </div>
-        <div className="flex xl:mr-[220px] xl:ml-[50px] ml-[200px] ">
+        <div className="flex flex-row relative">
+          <div className="rounded-t-full h-[560px] w-[420px] bg-[#110227] border-[8px] border-white"></div> 
           <img
-            src="/public/hero-image.png"
-            className="object-scale-down xl:object-contain h-[200px] w-[200px] md:h-[423px] md:w-[400px] xl:h-[632px] xl:w-[420px]"
+            src="public/animal-shelter-img-5 1.png"
+            className="object-scale-down xl:object-contain absolute -bottom-16 h-[100px] w-[100px] md:h-[423px] md:w-[400px] xl:h-[500px] xl:w-[500px]"
           />
         </div>
       </div>

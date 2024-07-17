@@ -34,13 +34,17 @@ import FifthContent from './components/FifthContent.jsx'
 import PawCalender from './components/PawCalender.jsx'
 import SixthContent from './components/SixthContent.jsx'
 import SeventhContent from './components/SeventhContent.jsx'
+import PawFooter from './components/PawFooter.jsx'
+import StartContent from './components/StartContent.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+   
+      <PawPrints />
+   
     
-    <PawCards />
     
 
   )
