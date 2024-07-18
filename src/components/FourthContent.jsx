@@ -1,57 +1,59 @@
+import { useState } from "react";
 import PawPrice from "./PawPrice";
 import PawRaised from "./PawRaised";
+import PawButton from "./PawButton";
 
 const FourthContent = () => {
+  const [val, setVal] = useState('')
   const money = [
-    { price: "$10" },
-    { price: "$25" },
-    { price: "$50" },
-    { price: "$100" },
-    { price: "$250" },
+    { price: "10.00" },
+    { price: "25.00" },
+    { price: "50.00" },
+    { price: "100.00" },
+    { price: "250.00" },
   ];
+  console.log("VALUE", val)
   return (
-    <div className="flex flex-row items-center px-[250px] py-[112px] gap-[153px]">
-      <div className="flex flex-row shadow-lg relative">
+    <div className="flex flex-row items-center w-full xl:px-[250px] xl:py-[112px] p-10 xl:gap-[153px] gap-5 ">
+      <div className="xl:flex flex-row shadow-lg relative hidden">
         <img src="/public/DogP4.png" className="relative " />
         <img src="/public/Logos.png" className="absolute -right-5 bottom-0" /> 
       </div>
-      <div className="flex flex-col gap-[24px]">
-        <div className="flex flex-col gap-[12px]">
-          <p className="text-[14px] text-[#8B4513]">
+      <div className="flex flex-col w-full xl:gap-[24px] gap-2 ">
+        <div className="flex flex-col xl:items-start items-center justify-center xl:gap-[12px] gap-2 ">
+          <p className="w-fit xl:text-[14px] text-[18px] text-[#8B4513] ">
             A Help to those who need it
           </p>
-          <h2 className="text-[42px]">Transform lives with donations</h2>
-          <p className="text-[18px] text-[#696F8C]">
+          <h2 className="xl:text-[42px] text-[22px] font-semibold text-center ">Transform lives with donations</h2>
+          <p className="text-[18px] text-[#696F8C] text-center ">
             Your donation can save lives. Help us provide care and find loving
             homes for rescued animals. Every contribution counts. Donate now!
           </p>
         </div>
-        <div className="flex flex-col gap-[24px]">
+        <div className="flex flex-col xl:gap-[24px] gap-7">
           <PawRaised />
-          <div className="gap-[24px]">
+          <div className="xl:gap-[24px]">
             <form className="">
-              <button type="button" className="px-[24px] py-[16px] border 1px">
+              <button type="button" className="xl:px-[24px] xl:py-[16px] py-4 px-5 border 1px">
                 {" "}
                 ${" "}
               </button>
               <input
                 type="text"
                 placeholder="10.00"
-                className="px-[24px] py-[16px] border 1px"
+                className="xl:px-[24px] px-6 xl:py-[16px] py-4 border 1px"
+                value={val}
+                onChange={(e) => setVal(e.target.value)}
               />
             </form>
-            <div className=" flex flex-row gap-[8px]">
+            <div className=" flex flex-row flex-wrap gap-[8px]">
               {money.map((items, index) => (
-                <PawPrice key={index} items={items} index={index} />
+                <PawPrice key={index} items={items} index={index} setVal={setVal} />
               ))}
             </div>
           </div>
         </div>
-        <div className="flex justify-start items-end">
-          <p className=" xl:py-[16px] py-[8px] xl:px-[40px] px-[20px] xl:text-[18px] text-[14px] font-[Work Sans] bg-[#8B4513] text-white rounded-xl">
-            Donate Now
-          </p>
-        </div>
+        <PawButton text="Donate Now" />
       </div>
     </div>
   );

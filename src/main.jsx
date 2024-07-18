@@ -16,6 +16,7 @@ import DropDownContent from './components/DropDownContent.jsx'
 import CoffeeCards from './components/CoffeeCards.jsx'
 import CoffeeCarousel from './components/CoffeeCarousel.jsx'
 import PawPrints from './components/PawPrints.jsx'
+import Test from './components/Test.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "PawPrints/",
     element: <PawPrints />
+  },
+  {
+    path: "Test/",
+    element: <Test />
   }
 ])
 

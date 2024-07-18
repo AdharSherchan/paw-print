@@ -1,29 +1,37 @@
+import { useEffect } from "react";
+import { useState } from "react";
+import PawVolunteer from "./PawVolunteer";
+
 const SixthContent = () => {
-    return(
-        <div className="flex flex-col items-center justify-center px-[250px] py-[112px] gap-[56px]">
-            <div className="flex flex-col justify-center items-center gap-[12px]">
-                <p className="text-[14px] text-[#8B4513]">TESTIMONIALS</p>
-                <h2 className="text-[42px]">Check what our volunteers are saying</h2>
-                <p className="text-[18px] text-[#696F8C] w-[900px] text-center">We advocate for vulnerable animals, providing safety while promoting responsible pet ownership. We uplift both animals and communities.</p>
-            </div>
-            <div className="flex flex-row gap-[132px]">
-                <div>
-                    <img src="/public/Volunteer.png"  />
-                </div>
-                <div className="flex flex-col my-[87px] w-[815px] gap-[32px]">
-                    <img src="/public/quote.png" className="w-[72px] h-[72px]"/>
-                    <p className="text-[24px]">Volunteering with fourpaws is incredibly fulfilling. Seeing rescued animals thrive is rewarding beyond words. The dedication of the team inspires me daily, and this experience has enriched my life in countless, meaningful ways.</p>
-                    <p className="text-[18px]">Gal G.</p>
-                    <div className="flex flex-row gap-[16px]">
-                        <img src="/public/Frame 66.png" className="h-[52px] w-[52px]" />
-                        <img src="/public/arrowright.png" className="h-[52px] w-[52px]"  />
-                        
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    )
-}
-export default SixthContent
+  const [display, setDisplay] = useState([]);
+  const [show, setShow] = useState(1)
+  const fetchVolunteer = async () => {
+    const response = await fetch(
+      `https://raw.githubusercontent.com/Himal-Marasini/frontend-task/main/testinomial_data.json`
+    );
+    const items = await response.json();
+    setDisplay(items.testimonial);
+    console.log("Items", items);
+  };
+  useEffect(() => {
+    fetchVolunteer();
+  }, []);
+  console.log("Display Value", display);
+  return (
+    <div className="flex flex-col items-center justify-center xl:px-[250px] xl:py-[112px] p-10 xl:gap-[56px] gap-5 ">
+      <div className="flex flex-col justify-center w-full items-center gap-[12px] ">
+        <p className="text-[14px] text-[#8B4513] ">TESTIMONIALS</p>
+        <h2 className="xl:text-[42px] text-[25px] text-center ">Check what our volunteers are saying</h2>
+        <p className="text-[18px] text-[#696F8C] xl:w-[900px] w-fit text-center ">
+          We advocate for vulnerable animals, providing safety while promoting
+          responsible pet ownership. We uplift both animals and communities.
+        </p>
+      </div>
+      <hr className="xl:hidden w-full m-2 border 1px border-slate-400 block" />
+      <div>
+        {display.length && <PawVolunteer items={display[show]} setShow={setShow} length={display.length}  />}
+      </div>
+    </div>
+  );
+};
+export default SixthContent;

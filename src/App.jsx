@@ -36,6 +36,7 @@ import SixthContent from './components/SixthContent.jsx'
 import SeventhContent from './components/SeventhContent.jsx'
 import PawFooter from './components/PawFooter.jsx'
 import StartContent from './components/StartContent.jsx'
+import PawVolunteer from './components/PawVolunteer.jsx'
 
 function App() {
   const [count, setCount] = useState(0)

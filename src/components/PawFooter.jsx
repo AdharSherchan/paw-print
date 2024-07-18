@@ -1,6 +1,7 @@
 import { BsTwitterX } from "react-icons/bs";
 import { ImFacebook } from "react-icons/im";
 import { PiInstagramLogoFill } from "react-icons/pi";
+import PawButton from "./PawButton";
 
 const PawFooter = () => {
   return (
@@ -17,12 +18,7 @@ const PawFooter = () => {
               placeholder="Enter your email"
               className="px-[20px] py-[10px] rounded-lg"
             />
-            <button
-              type="button"
-              className="text-white bg-[#8B4513] px-[20px] py-[10px] rounded-lg"
-            >
-              Subscribe
-            </button>
+            <PawButton text="Subscribe" className={"!px-[20px] !py-[10px]"} />
           </form>
         </div>
       </div>
