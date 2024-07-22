@@ -18,7 +18,7 @@ const ResponsiveNav = ({ setHamClick }) => {
           className=" p-1 px-5 m-1 rounded-full w-full "
           style={({isActive}) => {
             return{ backgroundColor: isActive? "purple": "none"}
-          }}
+          } }
           >
             HOME
           </NavLink>

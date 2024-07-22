@@ -1,5 +1,5 @@
-import PawButton from "./PawButton";
-import PawCards from "./PawCards";
+import PawButton from "../PawButton";
+import PawCards from "../PawCards";
 
 const ThirdContent = () => {
   const CardArray = [{img: "/public/Rectangle 5.png", title: 'New chance for animals', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
@@ -14,7 +14,7 @@ const ThirdContent = () => {
         <p className="xl:text-[18px] text-[15px] text-[#696F8C] xl:w-[936px] w-fit text-wrap text-center">We advocate for vulnerable animals, providing safety while promoting responsible pet ownership. We uplift both animals and communities.</p>
 
       </div>
-      <div className="flex xl:flex-row flex-col gap-[32px]">
+      <div className="flex xl:flex-row flex-col items-center justify-center gap-[32px]">
         {CardArray.map((items, index) => <PawCards key={index} items={items} index={index} />)}
         </div>
       <div className="flex justify-center w-full ">

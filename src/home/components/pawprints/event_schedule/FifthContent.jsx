@@ -1,5 +1,5 @@
-import PawButton from "./PawButton"
-import PawCalender from "./PawCalender"
+import PawButton from "../PawButton"
+import PawCalender from "../PawCalender"
 
 const FifthContent = () => {
     const calender =[{date: '08', month: 'JUNE', eventname:'Disaster Relief for Animals', time:'07:00 AM - 10:00 PM', location: 'Kathmandu'},

@@ -1,10 +1,28 @@
 import { NavLink } from "react-router-dom";
 import PawButton from "./PawButton";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const PawNavbar = () => {
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [topPosition, setTopPosition] = useState(5)
+
+  const handleScroll =() => {
+    const position = window.pageYOffset
+    setScrollPosition(position)
+  }
+  
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, {passive:true})
+    return() => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+  console.log('Scrollposition',scrollPosition)
+
+
   return (
-      <div className="xl:flex hidden items-center justify-center sticky top-0 z-50 bg-none border-[4px] border-cyan-500">
-      <div className="flex flex-row justify-between mx-[250px] xl:gap-[252px] rounded-xl  bg-white   ">
+      <div className= {` ${scrollPosition > 100 ? "top-0 bg-[#f7e2d8] " : "top-4"} xl:flex flex-row  justify-between left-1/2 -translate-x-1/2 xl:gap-[252px] rounded-xl bg-white fixed w-[80%]  z-50  transition-all duration-500 hidden`}>
         <div className="flex flex-row items-center justify-between my-[24px] ml-[28px] ">
           <div className="flex flex-row items-center justify-between gap-[32px]">
           <p>pawprints</p>
@@ -23,7 +41,6 @@ const PawNavbar = () => {
         </div>
         
       </div>
-    </div>
 
     
     

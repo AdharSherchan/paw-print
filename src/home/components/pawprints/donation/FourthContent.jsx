@@ -1,7 +1,7 @@
 import { useState } from "react";
-import PawPrice from "./PawPrice";
-import PawRaised from "./PawRaised";
-import PawButton from "./PawButton";
+import PawPrice from "../PawPrice";
+import PawRaised from "../PawRaised";
+import PawButton from "../PawButton";
 
 const FourthContent = () => {
   const [val, setVal] = useState('')
@@ -14,7 +14,7 @@ const FourthContent = () => {
   ];
   console.log("VALUE", val)
   return (
-    <div className="flex flex-row items-center w-full xl:px-[250px] xl:py-[112px] p-10 xl:gap-[153px] gap-5 ">
+    <div className="flex flex-row items-center bg-white w-full xl:px-[250px] xl:py-[112px] p-10 xl:gap-[153px] gap-5 ">
       <div className="xl:flex flex-row shadow-lg relative hidden">
         <img src="/public/DogP4.png" className="relative " />
         <img src="/public/Logos.png" className="absolute -right-5 bottom-0" /> 

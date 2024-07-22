@@ -1,8 +1,8 @@
-import PawButton from "./PawButton";
+import PawButton from "../PawButton";
 
 const SecondContent = () => {
   return (
-    <div className="bg-white xl:px-[250px] xl:py-[112px] w-full p-10 border border-purple-400">
+    <div className="bg-white xl:px-[250px] xl:py-[112px] w-full p-10 ">
       <div className="flex flex-col items-center justify-center xl:gap-[56px] gap-2 ">
         <div className="flex flex-col xl:w-[936px] w-full xl:gap-[12px] gap-2 ">
           <p className=" text-[14px] text-[#8B4513] font-bold text-center">

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import PawVolunteer from "./PawVolunteer";
+import PawVolunteer from "../PawVolunteer";
 
 const SixthContent = () => {
   const [display, setDisplay] = useState([]);
@@ -18,7 +18,7 @@ const SixthContent = () => {
   }, []);
   console.log("Display Value", display);
   return (
-    <div className="flex flex-col items-center justify-center xl:px-[250px] xl:py-[112px] p-10 xl:gap-[56px] gap-5 ">
+    <div className="flex flex-col items-center justify-center bg-white xl:px-[250px] xl:py-[112px] p-10 xl:gap-[56px] gap-5 ">
       <div className="flex flex-col justify-center w-full items-center gap-[12px] ">
         <p className="text-[14px] text-[#8B4513] ">TESTIMONIALS</p>
         <h2 className="xl:text-[42px] text-[25px] text-center ">Check what our volunteers are saying</h2>
