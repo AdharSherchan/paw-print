@@ -2,3 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url(/public/Montserrat-VariableFont_wght.ttf) format('opentype');
+  }
+  @font-face {
+    font-family: 'Oleo Script';
+    src: local('Oleo Script'), url(/public/OleoScript-Regular.ttf) format('opentype');
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans'), url(/public/WorkSans-VariableFont_wght.ttf) format('opentype');
+  }
+  .montserrat {
+    font-family: Montserrat;
+}
+.oleo-script {
+    font-family: Oleo Script;
+}
+.work-sans {
+  font-family: Work Sans;
+}
