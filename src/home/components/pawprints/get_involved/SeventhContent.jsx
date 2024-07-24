@@ -11,7 +11,7 @@ const SeventhContent = () => {
           </div>
           <img
             src="public/golden.png"
-            className="xl:h-[220px] h-[160px] xl:w-[250px] w-[190px] absolute bottom-0 left-20  "
+            className="xl:h-[220px] h-[160px] xl:w-[250px] w-[190px] absolute bottom-0 left-20 z-20  "
           />
         </div>
         <div className="flex flex-col xl:w-[60%] w-full items-center justify-center xl:py-[56px] xl:gap-[24px] gap-4 text-white  ">

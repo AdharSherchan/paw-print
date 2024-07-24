@@ -1,10 +1,12 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import PawButton from "../PawButton";
+import PawLayout from "../PawLayout";
 
 const SecondContent = () => {
   return (
-    <div className="bg-white xl:px-[250px] xl:py-[112px] w-full p-10 work-sans">
-      <div className="flex flex-col items-center justify-center xl:gap-[56px] gap-2 ">
+    // <div id="About" className="bg-white xl:px-[250px] xl:py-[112px] w-full p-10 work-sans">
+    
+      <div id="About" className="flex flex-col items-center justify-center xl:gap-[56px] gap-2 bg-white xl:px-[250px] xl:py-[112px] w-full p-10 work-sans ">
         <div className="flex flex-col xl:w-[936px] w-full xl:gap-[12px] gap-2 ">
           <p className=" text-[14px] text-[#8B4513] font-semibold text-center">
             WHO WE ARE AND OUR MISSION
@@ -43,7 +45,10 @@ const SecondContent = () => {
           </div>
         </div>
       </div>
-    </div>
+
+    
+      
+  //  </div>
   );
 };
 export default SecondContent;

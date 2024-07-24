@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 const PawResponsiveNav = ({ setHamClick }) => {
   return (
     <div className="flex xl:hidden">
@@ -8,12 +6,12 @@ const PawResponsiveNav = ({ setHamClick }) => {
           <button onClick={() => setHamClick(false)} className="text-2xl p-3 font-semibold">X</button>
         </div>
         <div className="flex flex-col gap-5 m-5  ">
-          <p className="text-2xl font-semibold  ">Paw Prints</p>
+          <a href="#Pawprint" className="text-2xl font-semibold  ">Paw Prints</a>
           <div className="flex flex-col gap-y-5">
-            <NavLink className="py-[8px] text-xl">Campaigns & Topics</NavLink>
-            <NavLink className=" py-[8px] text-xl"> Animals</NavLink>
-            <NavLink className="py-[8px]  text-xl"> About Us</NavLink>
-            <NavLink className="py-[8px]  text-xl"> Contact</NavLink>
+            <a href="#Campaign" className="py-[8px] text-xl">Campaigns & Topics</a>
+            <a href="#Animal" className=" py-[8px] text-xl"> Animals</a>
+            <a href="#About" className="py-[8px]  text-xl"> About Us</a>
+            <a href="#Contact" className="py-[8px]  text-xl"> Contact</a>
           </div>
         </div>
       </div>

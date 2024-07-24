@@ -11,10 +11,10 @@ const PawVolunteer = ({ items, setShow, length}) => {
         <p className="xl:text-[24px] text-[18px] work-sans xl:leading-[35px]">{items.content}</p>
         <p className="text-[18px] font-semibold montserrat">{items.fullName}</p>
         <div className="flex flex-row justify-center xl:justify-start gap-[16px]">
-          <button className="flex rounded-full xl:h-[52px] h-[42px] xl:w-[52px] w-[42px] items-center justify-center bg-[#FDF7F4] hover:bg-[#8B4513] shadow-lg" onClick={() => setShow((prev) => (prev <= 0 ? length - 1 : prev - 1 ))}>
+          <button className="flex rounded-full xl:h-[52px] h-[42px] xl:w-[52px] w-[42px] items-center justify-center bg-[#FDF7F4] hover:bg-[#8B4513] shadow-lg duration-500" onClick={() => setShow((prev) => (prev <= 0 ? length - 1 : prev - 1 ))}>
             <MdOutlineKeyboardArrowLeft className="h-[30px] w-[30px] text-[#D8C5B7]" />
           </button>
-          <button  className="flex rounded-full xl:h-[52px] h-[42px] xl:w-[52px] w-[42px] items-center justify-center bg-[#FDF7F4] hover:bg-[#8B4513] shadow-lg" onClick={() => setShow((prev) => (prev === length - 1 ? 0: prev + 1))}>
+          <button  className="flex rounded-full xl:h-[52px] h-[42px] xl:w-[52px] w-[42px] items-center justify-center bg-[#FDF7F4] hover:bg-[#8B4513] shadow-lg duration-500" onClick={() => setShow((prev) => (prev === length - 1 ? 0: prev + 1))}>
             <MdOutlineKeyboardArrowRight className="h-[30px] w-[30px] text-[#D8C5B7]" />
           </button>
         </div>

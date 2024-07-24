@@ -3,7 +3,7 @@ import PawRaised from "./PawRaised"
 const PawCards =({items, index}) => {
 
     return(
-        <div className="flex flex-col xl:h-[636px] xl:w-[452px] w-[300px] rounded-xl shadow-lg bg-white hover:scale-95 transition-all duration-300">
+        <div className="flex flex-col xl:min-h-[636px] xl:w-[452px] w-[300px] rounded-xl shadow-lg bg-white hover:scale-95 transition-all duration-300">
             <div>
                 <img src={items.img} className="object-cover xl:h-[302px] h-[200px] xl:w-[452px] w-[300px] rounded-t-xl" />
             </div>

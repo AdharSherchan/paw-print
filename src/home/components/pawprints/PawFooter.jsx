@@ -6,7 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const PawFooter = () => {
   return (
-    <div className="flex flex-col justify-center items-center mt-10 xl:mt-[100px] xl:px-[250px] px-10 xl:gap-0 gap-[4px] bg-white work-sans">
+    <div id="Contact" className="flex flex-col justify-center items-center mt-10 xl:mt-[100px] xl:px-[250px] px-10 xl:gap-0 gap-[4px] bg-white work-sans">
       <div className="flex md:flex-row flex-col w-screen xl:items-center justify-between gap-5 bg-[#93CEAA] xl:px-[250px]  p-5 ">
         <div className="flex flex-col">
           <p className="text-[20px] montserrat font-extrabold">

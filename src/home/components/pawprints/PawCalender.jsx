@@ -1,6 +1,6 @@
 const PawCalender = ({date, index}) => {
   return (
-    <div className="flex flex-col xl:p-[32px] p-4 xl:gap-[56px] gap-5 bg-[#FBEFE9] shadow-lg work-sans">
+    <div className="flex flex-col xl:p-[32px] p-4 xl:gap-[56px] gap-5 bg-[#FBEFE9] shadow-lg work-sans  hover:scale-105 transition-all duration-300">
       <div className="">
         <p className="xl:text-[56px] text-[40px] montserrat">{date.date}</p>
         <p className="text-[16px] text-[#696F8C]">{date.month}</p>

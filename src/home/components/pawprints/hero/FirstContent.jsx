@@ -26,11 +26,11 @@ const FirstContent = () => {
           </div>
         </div>
         <div className=" flex flex-col items-center justify-between gap-8 ">
-          <div className="flex flex-row relative right-16 lg:right-0 ml-[150px] lg:ml-0 ">
+          <div className="flex flex-row relative right-16 lg:right-0 ml-[150px] lg:ml-0 hover:-translate-y-6 duration-500">
             <div className="rounded-t-full lg:h-[560px] md:h-[320px] h-[210px] lg:w-[420px] md:w-[230px] w-[150px] bg-[#110227] lg:border-[8px] border-[2px] border-white "></div>
             <img
               src="public/animal-shelter-img-5 1.png"
-              className="object-scale-down lg:object-contain absolute lg:-bottom-16 md:-bottom-8 md:right-2 -bottom-6 right-4 h-[200px] w-[120px] md:h-[300px] md:w-[300px] lg:h-[500px] lg:w-[500px]"
+              className="object-scale-down lg:object-contain absolute lg:-bottom-16 md:-bottom-8 md:right-2 -bottom-6 right-4 h-[200px] w-[120px] md:h-[300px] md:w-[300px] lg:h-[500px] lg:w-[500px] "
             />
           </div>
           <PawButton className={"lg:hidden flex flex-row items-center justify-center gap-3 "} > 

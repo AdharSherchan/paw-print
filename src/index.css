@@ -24,3 +24,6 @@
 .work-sans {
   font-family: Work Sans;
 }
+html{
+  scroll-behavior: smooth;
+}

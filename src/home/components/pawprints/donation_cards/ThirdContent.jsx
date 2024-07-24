@@ -21,7 +21,7 @@ const ThirdContent = () => {
     },
   ];
   return (
-    <div className="flex flex-col bg-[#FDF7F4] w-full xl:px-[250px] xl:py-[112px] p-10 gap-[56px] work-sans">
+    <div id="Animal" className="flex flex-col bg-[#FDF7F4] w-full xl:px-[250px] xl:py-[112px] p-10 gap-[56px] work-sans">
       <div className="flex flex-col items-center justify-center xl:gap-[12px] gap-3">
         <p className="text-[14px] text-[#8B4513] font-semibold">
           A HELP TO THOSE WHO NEED IT

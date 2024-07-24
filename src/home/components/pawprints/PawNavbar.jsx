@@ -29,26 +29,26 @@ const PawNavbar = () => {
       <div className=" xl:flex flex-row  justify-between w-full">
         <div className="flex flex-row items-center justify-between my-[24px] ml-[28px]">
           <div className="flex flex-row items-center justify-between gap-[32px]">
-            <p className="oleo-script font-bold text-[25px] text-[#8B4513]">
+            <a href="#Pawprint" className="oleo-script font-bold text-[25px] text-[#8B4513]">
               Paw Prints
-            </p>
+            </a>
             <div className="h-[48px] border-[1px] border-gray-200"></div>
             <div className="flex flex-row justify-between py-[8px] px-[24px] ">
-              <NavLink className="py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300 ">
+              <a href="#Campaign" className="py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300 ">
                 Campaigns & Topics
-              </NavLink>
-              <NavLink className=" py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300">
+              </a>
+              <a href="#Animal" className=" py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300">
                 {" "}
                 Animals
-              </NavLink>
-              <NavLink className="py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300">
+              </a>
+              <a href="#About" className="py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300">
                 {" "}
                 About Us
-              </NavLink>
-              <NavLink className="py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300">
+              </a>
+              <a href="#Contact" className="py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300">
                 {" "}
                 Contact
-              </NavLink>
+              </a>
             </div>
           </div>
         </div>
