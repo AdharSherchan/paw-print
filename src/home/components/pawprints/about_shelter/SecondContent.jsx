@@ -1,6 +1,5 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import PawButton from "../PawButton";
-import PawLayout from "../PawLayout";
 
 const SecondContent = () => {
   return (
@@ -39,7 +38,7 @@ const SecondContent = () => {
           </div>
           <div>
             <img
-              src="/public/Rectangle 4.png"
+              src="/Rectangle 4.png"
               className=" object-contain xl:h-[430px] h-[200px] xl:w-[747px] w-[300px]"
             />
           </div>

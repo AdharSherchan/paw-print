@@ -5,7 +5,6 @@ import PawNavbar from "./PawNavbar"
 
 const Navigation = () => {
     const [hamClick, setHamClick] = useState(false)
-    console.log("Hamclick",hamClick)
     return(
         <div>
             <div  className="flex w-full z-50 items-end justify-end fixed">

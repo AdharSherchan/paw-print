@@ -3,38 +3,35 @@ import PawPrice from "../PawPrice";
 import PawRaised from "../PawRaised";
 import PawButton from "../PawButton";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { money } from "../../../contstant/data";
 
 const FourthContent = () => {
   const [val, setVal] = useState("");
-  const money = [
-    { price: "10.00" },
-    { price: "25.00" },
-    { price: "50.00" },
-    { price: "100.00" },
-    { price: "250.00" },
-  ];
-  console.log("VALUE", val);
+
   return (
-    <div className="flex flex-row items-center work-sans bg-white w-full xl:px-[250px] xl:py-[112px] p-10 xl:gap-[153px] gap-5 ">
-      <div className="xl:flex flex-row shadow-lg relative hidden">
-        <img src="/public/DogP4.png" className="relative " />
-        <img src="/public/Logos.png" className="absolute -right-5 bottom-0" />
+    <div className="flex md:flex-row flex-col items-center justify-between work-sans bg-white w-full xl:px-[250px] xl:py-[112px] p-10 xl:gap-x-32 gap-8  ">
+      <div className="flex  justify-center xl:justify-start items-center shadow-lg relative w-fit "> 
+        <div className=" relative xl:h-[669px] h-[300px] xl:w-[400px] w-[200px]">
+        <img src="/DogP4.png" className=" object-cover  w-full h-full rounded-md" />
+        <img src="/Logos.png" className="absolute object-contain xl:h-[200px] h-[100px]  xl:w-[90px] xl:-right-10 -right-4 xl:bottom-10 bottom-5 z-10 " />
+        </div>
+       
       </div>
-      <div className="flex flex-col w-full xl:gap-[24px] gap-2 ">
+      <div className="flex flex-col w-full xl:gap-[24px] gap-2 min-w-[50%]  ">
         <div className="flex flex-col xl:items-start items-center justify-center xl:gap-[12px] gap-2 ">
-          <p className="w-fit xl:text-[14px] text-[18px] text-[#8B4513] font-semibold ">
+          <p className=" xl:text-[14px]  w-fit text-[18px] text-[#8B4513] font-semibold ">
             A HELP TO THOSE WHO NEED IT
           </p>
-          <h2 className="xl:text-[42px] text-[22px] montserrat font-medium text-center ">
+          <h2 className="xl:text-[42px] text-[22px] montserrat font-medium ">
             Transform lives with donations
           </h2>
-          <p className="text-[18px] text-[#696F8C] text-center ">
+          <p className="text-[18px] text-[#696F8C] xl:text-left text-center">
             Your donation can save lives. Help us provide care and find loving
             homes for rescued animals. Every contribution counts. Donate now!
           </p>
         </div>
         <div className="flex flex-col xl:gap-[24px] gap-7">
-          <PawRaised />
+          <PawRaised setVal={setVal} value={val} />
           <div className="xl:gap-[24px]">
             <form className="">
               <button

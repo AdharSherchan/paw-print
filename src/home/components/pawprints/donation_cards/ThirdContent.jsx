@@ -1,25 +1,9 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import PawButton from "../PawButton";
 import PawCards from "../PawCards";
-
+import { CardArray } from "../../../contstant/data";
 const ThirdContent = () => {
-  const CardArray = [
-    {
-      img: "/public/Rectangle 5.png",
-      title: "New chance for animals",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      img: "/public/cat.png",
-      title: "Help the eco system",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      img: "/public/dog.png",
-      title: "New Sustainability",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-  ];
+
   return (
     <div id="Animal" className="flex flex-col bg-[#FDF7F4] w-full xl:px-[250px] xl:py-[112px] p-10 gap-[56px] work-sans">
       <div className="flex flex-col items-center justify-center xl:gap-[12px] gap-3">

@@ -1,12 +1,15 @@
-const PawRaised = () => {
+import { useState } from "react";
+import PawSlider from "./PawSlider";
+
+const PawRaised = ({setVal, value}) => {
   return (
-     <div className="flex flex-col w-fit">
+     <div className="flex flex-col w-full xl:gap-[16px] gap-4 ">
       <div className="flex flex-row items-center justify-between font-medium">
         <p className="text-[16px] ">GOAL : $1340</p>
-        <p className="text-[16px] ">RAISED : $800</p>
+        <p className="text-[16px] ">RAISED : $ {value}</p>
       </div>
       <div>
-        <img src="/public/Frame 37.png" className="" />
+        <PawSlider setVal={setVal} />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const PawVolunteer = ({ items, setShow, length}) => {
         <img src={items.imagePath} className="object-contain xl:h-full h-[250px] xl:w-full w-[200px]" />
       </div>
       <div className="flex flex-col xl:my-[87px] m-0 xl:w-[815px] w-full xl:gap-[32px] gap-5">
-        <img src="/public/quote.png" className="xl:w-[72px] w-[40px] xl:h-[72px] h-[40px]" />
+        <img src="/quote.png" className="xl:w-[72px] w-[40px] xl:h-[72px] h-[40px]" />
         <p className="xl:text-[24px] text-[18px] work-sans xl:leading-[35px]">{items.content}</p>
         <p className="text-[18px] font-semibold montserrat">{items.fullName}</p>
         <div className="flex flex-row justify-center xl:justify-start gap-[16px]">

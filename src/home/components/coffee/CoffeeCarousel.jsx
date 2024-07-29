@@ -31,7 +31,7 @@ const CoffeeCarousel = () => {
   }, [show]);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[url('/public/coffee.jpg')] lg:bg-contain bg-cover ">
+    <div className="flex items-center justify-center min-h-screen bg-[url('/coffee.jpg')] lg:bg-contain bg-cover ">
       <div className="flex justify-center items-center h-[100%] w-[100%] backdrop-blur-sm m-5">
         <div className="flex flex-col items-center justify-center h-[90%] w-[90%] bg-stone-200/40 rounded-xl m-5">
           <div className="flex justify-center items-center h-[10%] w-[90%] m-5 ">

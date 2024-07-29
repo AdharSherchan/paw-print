@@ -10,7 +10,7 @@ const SeventhContent = () => {
             {" "}
           </div>
           <img
-            src="public/golden.png"
+            src="/golden.png"
             className="xl:h-[220px] h-[160px] xl:w-[250px] w-[190px] absolute bottom-0 left-20 z-20  "
           />
         </div>
@@ -40,7 +40,7 @@ const SeventhContent = () => {
             {" "}
           </div>
           <img
-            src="public/animal-shelter-img-5 1.png"
+            src="/animal-shelter-img-5 1.png"
             className="xl:h-[220px] h-[170px] xl:w-[180px] w-[190px] object-contain absolute -bottom-4 right-12  "
           />
         </div>

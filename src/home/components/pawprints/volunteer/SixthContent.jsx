@@ -11,12 +11,10 @@ const SixthContent = () => {
     );
     const items = await response.json();
     setDisplay(items.testimonial);
-    console.log("Items", items);
   };
   useEffect(() => {
     fetchVolunteer();
   }, []);
-  console.log("Display Value", display);
   return (
     <div className="flex flex-col items-center justify-center bg-white xl:px-[250px] xl:py-[112px] p-10 xl:gap-[56px] gap-5 work-sans ">
       <div className="flex flex-col justify-center w-full items-center gap-[12px] ">

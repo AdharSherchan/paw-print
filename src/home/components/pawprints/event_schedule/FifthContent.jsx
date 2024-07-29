@@ -1,31 +1,10 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import PawButton from "../PawButton";
 import PawCalender from "../PawCalender";
+import { calender } from "../../../contstant/data";
 
 const FifthContent = () => {
-  const calender = [
-    {
-      date: "08",
-      month: "JUNE",
-      eventname: "Disaster Relief for Animals",
-      time: "07:00 AM - 10:00 PM",
-      location: "Kathmandu",
-    },
-    {
-      date: "12",
-      month: "JUNE",
-      eventname: "Rapid Response for Animals",
-      time: "07:00 AM - 10:00 PM",
-      location: "Kathmandu",
-    },
-    {
-      date: "17",
-      month: "JUNE",
-      eventname: "Disaster Reflief for Animals",
-      time: "07:00 AM - 10:00 PM",
-      location: "Kathmandu",
-    },
-  ];
+  
   return (
     <div id="Campaign" className="flex flex-col items-center justify-between xl:px-[250px] xl:py-[112px] p-10 xl:gap-[56px] gap-5 bg-[#FDF7F4] work-sans">
       <div className="flex flex-col items-center justify-between xl:gap-[12px] gap-3">

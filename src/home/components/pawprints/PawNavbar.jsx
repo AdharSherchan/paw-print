@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import PawButton from "./PawButton";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -6,6 +5,7 @@ import { useState } from "react";
 const PawNavbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [topPosition, setTopPosition] = useState(5);
+  const [activeSection, setActiveSection] = useState('');
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -18,12 +18,15 @@ const PawNavbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log("Scrollposition", scrollPosition);
+
+  const handleSetActive = (section) => {
+    setActiveSection(section);
+  };
 
   return (
     <div
       className={` ${
-        scrollPosition > 100 ? "top-0 bg-[#f7e2d8] " : "top-4"
+        scrollPosition > 100 ? "top-0 bg-[#FDF7F4] shadow-md" : "top-4"
       } xl:flex flex-row  justify-between left-1/2 -translate-x-1/2 xl:gap-[252px] rounded-xl bg-white fixed w-[80%]  z-50  transition-all duration-500 hidden`}
     >
       <div className=" xl:flex flex-row  justify-between w-full">
@@ -34,21 +37,46 @@ const PawNavbar = () => {
             </a>
             <div className="h-[48px] border-[1px] border-gray-200"></div>
             <div className="flex flex-row justify-between py-[8px] px-[24px] ">
-              <a href="#Campaign" className="py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300 ">
+            <a
+                href="#Campaign"
+                onClick={() => handleSetActive('Campaign')}
+                className={`py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300 ${
+                  activeSection === 'Campaign' ? 'text-[#8B4513]' : ''
+                }`}
+              >
                 Campaigns & Topics
               </a>
-              <a href="#Animal" className=" py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300">
-                {" "}
+              <a
+                href="#Animal"
+                onClick={() => handleSetActive('Animal')}
+                className={`py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300 ${
+                  activeSection === 'Animal' ? 'text-[#8B4513]' : ''
+                }`}
+              >
                 Animals
               </a>
-              <a href="#About" className="py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300">
-                {" "}
+              <a
+                href="#About"
+                onClick={() => handleSetActive('About')}
+                className={`py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300 ${
+                  activeSection === 'About' ? 'text-[#8B4513]' : ''
+                }`}
+              >
                 About Us
               </a>
-              <a href="#Contact" className="py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300">
-                {" "}
+              <a
+                href="#Contact"
+                onClick={() => handleSetActive('Contact')}
+                className={`py-[8px] px-[24px] hover:text-[#8B4513] hover:scale-105 transition-all duration-300 ${
+                  activeSection === 'Contact' ? 'text-[#8B4513]' : ''
+                }`}
+              >
                 Contact
               </a>
+
+
+
+
             </div>
           </div>
         </div>
